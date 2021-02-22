@@ -3,13 +3,13 @@ import akshare as ak
 import pandas as pd
 import datetime
 
-fundlist = ['164902','519723','519782','519718','006793','519755','519738','519752','002503','002058','002435','003967','002414','519772','519773','519704','163407','110020','100038','000051','000478','001052','161017','002903','100032','090010','001180','002708','000968','001064','004752','001469','502010','000942','110027','340001','270048','000563','000147','003376','002001','000071','000216']
+fundlist = ['002001','161005','163402','163407','110020','100038','000051','000478','001052','161017','002903','100032','090010','001180','002708','000968','001064','004752','001469','502010','000942','110027','340001','270048','000563','000147','003376','000071','000216']
 overseefundlist = ['000614','050025','164906','162411','160416']
 etflist =['159938','512980','159920','515180']
 sz162411_code = 'sz162411'
 a_stockList = ['600036','000002']
 voo_code = 'VOO'
-us_stockList = ['TLT','IEF','SGOL','DBC'] 
+us_stockList = ['VT','EDV','SGOL'] 
 
 csv_file = '/Users/19070005/Documents/gitRepo/akshare-test/all_test.csv'
 code =  'codes'
@@ -49,8 +49,8 @@ sz162411_df = select_today_close_price(sz162411_df,sz162411_code)
 a_stock_df = select_today_price(ak.stock_zh_a_spot(),'code','trade',a_stockList)
 
 # US Stock
-voo_df = ak.stock_us_daily(symbol=voo_code, adjust="")
-voo_df = select_today_close_price(voo_df,voo_code)
+#voo_df = ak.stock_us_daily(symbol=voo_code, adjust="")
+#voo_df = select_today_close_price(voo_df,voo_code)
 
 us_stock_df = select_today_price(ak.stock_us_spot(),'symbol','price',us_stockList)
 
