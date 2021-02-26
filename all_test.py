@@ -52,7 +52,7 @@ a_stock_df = select_today_price(ak.stock_zh_a_spot(),'code','trade',a_stockList)
 #voo_df = ak.stock_us_daily(symbol=voo_code, adjust="")
 #voo_df = select_today_close_price(voo_df,voo_code)
 
-us_stock_df = select_today_price(ak.stock_us_spot(),'symbol','price',us_stockList)
+#us_stock_df = select_today_price(ak.stock_us_spot(),'symbol','price',us_stockList)
 
 #toCS
-open_df.append(qdii_df).append(etf_df).append(sz162411_df).append(a_stock_df).append(voo_df).append(us_stock_df).to_csv(csv_file)
+open_df.append(qdii_df).append(etf_df).append(sz162411_df).append(a_stock_df).to_csv(csv_file)
